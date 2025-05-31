@@ -1,0 +1,39 @@
+.quill-wrapper {
+    border-radius: 0.25rem;
+    padding: 0px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.quill-wrapper.focus {
+    border-color: #9dcbff;
+    box-shadow: 0 0 0 .25rem rgba(58, 150, 255, .25);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.quill-editor {
+    overflow-y: auto;
+}
+
+
+.ql-toolbar.ql-snow {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.ql-container.ql-snow {
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.ql-editor {
+    border-radius: 0.25rem;
+}
+
+.ql-formats {
+    margin-top: -4px;
+}
+
+.ql-container {
+    font-family: inherit !important;
+    font-size: inherit !important
+}
