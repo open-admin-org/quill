@@ -5,7 +5,7 @@ This is a `open-admin` extension that integrates `Quill` into the `open-admin` f
 
 ## Screenshot
 
-![field-quill](https://user-images.githubusercontent.com/86517067/149800371-a99f23ba-c979-4122-bb7d-2cc32ecd0982.png)
+![field-quill](https://github.com/user-attachments/assets/bb1e884d-b3ac-4e3a-83e6-79fb2dbfa776)
 
 ## Installation
 
@@ -41,9 +41,7 @@ In the `extensions` section of the `config/admin.php` file, add some configurati
 The configuration of the editor can be found in [Quill Documentation](https://quilljs.com/docs/configuration/), such as configuration language and height.
 ```php
     'config' => [
-        'language'      => 'de',
-        'height'        => 500,
-        'contentsCss'   => '/css/frontend-body-content.css',
+        'placeholder'      => 'Compose an epic...',
     ]
 ```
 
@@ -51,14 +49,22 @@ The configuration of the editor can be found in [Quill Documentation](https://qu
 
 Use it in the form:
 ```php
-$form->quill('content');
+$form->quill('content','field label');
 
 // Set config
-$form->quill('content')->options(['lang' => 'fr', ...]);
+$form->quill('content')->options(['placeholder' => 'Write some text...', ...]);
+
+// Set heights
+$form->quill('content')->minHeight('200px')->maxHeight('600px');
+
+// Set toolbar
+$form->quill('content')->toolbar([['bold', 'italic', 'underline', 'strike']['clean']]);
 ```
 
 Problems?
 ------------
+Please not that Quill does not work nicely with the Ckeditor installed and enabled.
+
 If Quill is not showing up and tells you that it's not found run the lines below to clear the compiled services and packages.
 
 ```bash
