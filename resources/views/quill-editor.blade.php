@@ -11,7 +11,7 @@
 
         </style>
         <div class="quill-wrapper" id="{{ $id }}_quill_wrapper" onClick="this.classList.add('focus')">
-            <div id="{{ $id }}_quill_editor" class="quill-editor"></div>
+            <div id="{{ $id }}_quill_editor" class="quill-editor">{!! old($column, $value) !!}</div>
 
             <textarea style="display:none;"name="{{$name}}" rows="{{ $rows }}" id="{{ $id }}" placeholder="{{ $placeholder }}" {!! $attributes !!} >
                 {{ old($column, $value) }}
